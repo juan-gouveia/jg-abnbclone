@@ -8,6 +8,10 @@ export interface Room {
   category: RoomCategory;
   price: number;
   rating: number;
+  coordinates: {
+    latitude: number;
+    longitude: number;
+  };
   imageUrl: string;
   imageAlt: string;
 }
