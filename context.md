@@ -46,3 +46,12 @@ npm
   - roomsCard must include picture placeholder, title, price per night and rating (stars from 1 to 5)
   - Grid is to be 1 column when viewport = 375px
   - Implement useEffect to simulate data loading while website is building: start with empty list with a load state true, after a small setTimeout (2 seconds) asing data and mark the state as false. Show a loading indicator while data is not available.
+
+### Catalog
+
+1. Heading with search results: number of matches, order controls (ascendant/descendant by price)
+  - useState to keep selected order and reorder shown roomsCard accordingly
+2. Reuse roomsCard from home page
+3. Add a location map (below roomsCard for 375px, to the right on bigger screens)
+  - Implement Google Maps API
+  - Show each result on the map as a pin using it's coordinates
