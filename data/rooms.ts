@@ -1,0 +1,14 @@
+import type { Room } from "@/types/room";
+
+export const rooms: Room[] = [
+  { id: "coastal-cove", title: "Coastal cove retreat", category: "Beach", price: 245, rating: 5, imageUrl: "https://images.pexels.com/photos/2300959/pexels-photo-2300959.jpeg?auto=compress&cs=tinysrgb&w=1200", imageAlt: "Modern house overlooking the sea" },
+  { id: "palm-house", title: "Palm house hideaway", category: "Beach", price: 198, rating: 4, imageUrl: "https://images.pexels.com/photos/29957213/pexels-photo-29957213.jpeg?auto=compress&cs=tinysrgb&w=1200", imageAlt: "Beach house framed by palm trees" },
+  { id: "city-loft", title: "Sunlit city loft", category: "Apartment", price: 165, rating: 5, imageUrl: "https://images.pexels.com/photos/11296142/pexels-photo-11296142.jpeg?auto=compress&cs=tinysrgb&w=1200", imageAlt: "Modern apartment living room and dining space" },
+  { id: "design-flat", title: "Design-led downtown flat", category: "Apartment", price: 152, rating: 4, imageUrl: "https://images.pexels.com/photos/6297086/pexels-photo-6297086.jpeg?auto=compress&cs=tinysrgb&w=1200", imageAlt: "Open plan apartment with kitchen and seating" },
+  { id: "garden-room", title: "Quiet garden room", category: "Room", price: 84, rating: 4, imageUrl: "https://images.pexels.com/photos/8146214/pexels-photo-8146214.jpeg?auto=compress&cs=tinysrgb&w=1200", imageAlt: "Bright room with wood floor and furniture" },
+  { id: "brick-suite", title: "Brickwork artist suite", category: "Room", price: 112, rating: 5, imageUrl: "https://images.pexels.com/photos/33537442/pexels-photo-33537442.jpeg?auto=compress&cs=tinysrgb&w=1200", imageAlt: "Cozy brick walled living room with a large window" },
+  { id: "lake-cabin", title: "Lakefront mountain cabin", category: "Mountain", price: 214, rating: 5, imageUrl: "https://images.pexels.com/photos/19124719/pexels-photo-19124719.jpeg?auto=compress&cs=tinysrgb&w=1200", imageAlt: "Wooden cabin beside an alpine lake" },
+  { id: "alpine-cottage", title: "Alpine meadow cottage", category: "Mountain", price: 189, rating: 4, imageUrl: "https://images.pexels.com/photos/4406354/pexels-photo-4406354.jpeg?auto=compress&cs=tinysrgb&w=1200", imageAlt: "Log cabin in a grassy mountain valley" },
+  { id: "ocean-village", title: "Ocean village escape", category: "Beach", price: 176, rating: 4, imageUrl: "https://images.pexels.com/photos/1263779/pexels-photo-1263779.jpeg?auto=compress&cs=tinysrgb&w=1200", imageAlt: "Aerial view of colorful houses beside the ocean" },
+  { id: "penthouse-view", title: "Skyline penthouse", category: "Apartment", price: 229, rating: 5, imageUrl: "https://images.pexels.com/photos/6077368/pexels-photo-6077368.jpeg?auto=compress&cs=tinysrgb&w=1200", imageAlt: "Light apartment interior with large city view windows" },
+];
