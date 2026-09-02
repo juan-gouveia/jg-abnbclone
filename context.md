@@ -29,3 +29,20 @@ npm
 - Use <a href="..."> for links.
 - Use prebuilt components libraries.
 - Have components be more than ~80 JSX lines + logic; if so, break it down.
+
+## What we need
+
+### Home Page (/)
+
+**1 & 2 are anchored on top of site**
+1. Top navbar
+  - Logo (left), search bar (center), user menu icon
+    * Search bar uses useState to store input and filter visible roomsCard in real time
+2. Horizontal filter bar (below navbar)
+  - Icon + tag: "Beach", "Apartment", "Room", "Mountain"
+    * useState stores active category and highlights it
+    * Must be a carrousel on small viewport
+3. Responsive grid for roomsCard (include 10 for this project)
+  - roomsCard must include picture placeholder, title, price per night and rating (stars from 1 to 5)
+  - Grid is to be 1 column when viewport = 375px
+  - Implement useEffect to simulate data loading while website is building: start with empty list with a load state true, after a small setTimeout (2 seconds) asing data and mark the state as false. Show a loading indicator while data is not available.
