@@ -5,11 +5,12 @@ import type { Room } from "@/types/room";
 
 interface RoomCardProps {
   room: Room;
+  sourceHref: string;
 }
 
-export const RoomCard = ({ room }: RoomCardProps) => {
+export const RoomCard = ({ room, sourceHref }: RoomCardProps) => {
   return (
-    <Link href={`/rooms/${room.id}`} className="group block">
+    <Link href={`/rooms/${room.id}?from=${encodeURIComponent(sourceHref)}`} className="group block">
       <div className="relative aspect-4/3 overflow-hidden rounded-lg bg-zinc-100">
         <Image
           src={room.imageUrl}

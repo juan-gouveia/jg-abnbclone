@@ -54,7 +54,7 @@ export const HomeListings = ({ rooms: allRooms }: HomeListingsProps) => {
         <CategoryFilter activeCategory={activeCategory} onCategoryChange={setActiveCategory} />
       </header>
       <section className="mx-auto max-w-7xl px-4 py-6 md:px-8 md:py-8">
-        {isLoading ? <LoadingIndicator /> : visibleRooms.length > 0 ? <div className="grid grid-cols-1 gap-x-5 gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">{visibleRooms.map((room) => <RoomCard key={room.id} room={room} />)}</div> : <p className="py-20 text-center text-zinc-600">No stays match your search.</p>}
+        {isLoading ? <LoadingIndicator /> : visibleRooms.length > 0 ? <div className="grid grid-cols-1 gap-x-5 gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">{visibleRooms.map((room) => <RoomCard key={room.id} room={room} sourceHref="/" />)}</div> : <p className="py-20 text-center text-zinc-600">No stays match your search.</p>}
       </section>
     </div>
   );

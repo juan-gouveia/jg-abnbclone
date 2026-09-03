@@ -15,9 +15,10 @@ import type { Room } from "@/types/room";
 
 interface RoomDetailProps {
   roomId: string;
+  returnHref: string;
 }
 
-export const RoomDetail = ({ roomId }: RoomDetailProps) => {
+export const RoomDetail = ({ roomId, returnHref }: RoomDetailProps) => {
   const [room, setRoom] = useState<Room | null>(null);
 
   useEffect(() => {
@@ -32,7 +33,7 @@ export const RoomDetail = ({ roomId }: RoomDetailProps) => {
 
   return (
     <div className="min-h-screen bg-white pb-80 md:pb-12">
-      <header className="border-b border-zinc-200"><div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-8"><RoomBackButton /><SiteLogo /></div></header>
+      <header className="border-b border-zinc-200"><div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-8"><RoomBackButton returnHref={returnHref} /><SiteLogo /></div></header>
       <main className="mx-auto max-w-6xl px-4 py-6 md:grid md:grid-cols-[minmax(0,1fr)_22rem] md:gap-10 md:px-8 md:py-8"><div><RoomGallery images={room.gallery} /><RoomHeading room={room} /><HostCard host={host} /><AmenitiesGrid amenities={room.amenities} /></div><div className="hidden md:block md:sticky md:top-6 md:self-start"><ReservationCard price={room.price} /></div></main>
       <div className="fixed inset-x-0 bottom-0 z-10 md:hidden"><ReservationCard price={room.price} /></div>
     </div>
