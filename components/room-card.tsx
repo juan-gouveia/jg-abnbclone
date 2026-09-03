@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Rating } from "@/components/rating";
 import type { Room } from "@/types/room";
 
@@ -8,7 +9,7 @@ interface RoomCardProps {
 
 export const RoomCard = ({ room }: RoomCardProps) => {
   return (
-    <article className="group">
+    <Link href={`/rooms/${room.id}`} className="group block">
       <div className="relative aspect-4/3 overflow-hidden rounded-lg bg-zinc-100">
         <Image
           src={room.imageUrl}
@@ -25,6 +26,6 @@ export const RoomCard = ({ room }: RoomCardProps) => {
       <p className="mt-1 text-sm text-zinc-600">
         <span className="font-semibold text-zinc-900">${room.price}</span> night
       </p>
-    </article>
+    </Link>
   );
 };
