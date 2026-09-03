@@ -55,3 +55,19 @@ npm
 3. Add a location map (below roomsCard for 375px, to the right on bigger screens)
   - Implement Google Maps API
   - Show each result on the map as a pin using it's coordinates
+
+### Room Page
+
+1. /rooms/[id]
+2. useEffect to load room data when component is mounted, using the id from the URL
+  - Sim fetching with setTimeout and show loading state while data isn't fully loaded
+3. Picture gallery (max 5 elements) at top
+  - useState stores current visible picture index's, use previous/next buttons to move through the array of pictures
+  - Include a bottom-right overlay on the image with a counter of pictures #/#
+4. Heading for the room: title, rating, number of reviews and location
+5. Host information row: avatar picture, host's name and years as host
+  - Create new hostCard interface for this and create 3 instances so we have options for the Room Page
+6. Add an "Amenities" section: grid with pairs using icon + tag
+7. Floating reservation card (anchored bottom) that includes: price for night, guests counter, CTA button
+  - useState for guest counter with min 1 and max 4
+  - Optional: use date picker lib to add check-in and check-out dates and then calculate total price for nights chosen
